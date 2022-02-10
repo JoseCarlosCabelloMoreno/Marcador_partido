@@ -81,20 +81,21 @@
 
             <ImageView
                 android:id="@+id/imagen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_below="@id/LocalMarcador"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:adjustViewBounds="true"
-                android:src="@android:drawable/ic_menu_camera" />
+                android:src="@drawable/ball"/>
 
             <ImageButton
                 android:id="@+id/boton_reset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/imagen"
-                android:layout_marginRight="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginRight="80dp"
                 android:layout_toLeftOf="@+id/LocalMarcador"
                 android:backgroundTint="@color/botonColor"
                 android:src="@drawable/update" />
@@ -104,7 +105,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/imagen"
-                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="80dp"
+
                 android:backgroundTint="@color/botonColor"
                 android:src="@drawable/next"
                 android:layout_toRightOf="@+id/LocalMarcador" />
