@@ -6,4 +6,7 @@
     <string name="menos_uno">-1</string>
     <string name="_2">+2</string>
     <string name="visitante">Visitante</string>
+    <string name="local_visitante">Local-Visitante</string>
+    <string name="guion">-</string>
+    <string name="resultado">Resultado</string>
 </resources>

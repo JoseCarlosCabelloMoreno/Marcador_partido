@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="marcador"
+            type="com.example.marcador.Marcadorc" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Resultados">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/LocalText2"
+                android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                android:text="@string/local_visitante"
+                android:textSize="40sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                />
+
+            <TextView
+                android:id="@+id/guion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guion"
+                android:textSize="80sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/LocalResul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{marcador.local}"
+                android:textSize="80sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_toLeftOf="@+id/guion"
+                android:layout_marginRight="40dp"
+                android:layout_toStartOf="@+id/guion"
+                android:layout_marginEnd="40dp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/VisitanteResul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{marcador.visitante}"
+                android:textSize="80sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/guion"
+                android:layout_marginLeft="40dp"
+                tools:ignore="RelativeOverlap"
+                android:layout_toEndOf="@+id/guion" />
+
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resultado"
+                android:textSize="40sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_below="@+id/guion"
+                android:layout_centerHorizontal="true"
+                tools:ignore="RelativeOverlap"
+                android:layout_marginTop="40dp"
+                 />
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

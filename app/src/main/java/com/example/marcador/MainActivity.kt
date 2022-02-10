@@ -1,5 +1,6 @@
 package com.example.marcador
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -22,9 +23,10 @@ class MainActivity : AppCompatActivity() {
         val marcador_local=binding.LocalMarcador
         val marcador_visitante=binding.VisitanteMarcador
         val restart_boton=binding.botonReset
+        val siguinete_boton=binding.botonResultado
 
 
-        val Marcador=marcador(marcador_local.text.toString(),marcador_visitante.text.toString())
+        val Marcador=Marcadorc(marcador_local.text.toString(),marcador_visitante.text.toString())
 
         boton_mas_2_local.setOnClickListener{
             binding.LocalMarcador.text=sumar2("local", Marcador)
@@ -66,56 +68,70 @@ class MainActivity : AppCompatActivity() {
             binding.VisitanteMarcador.text=reiniciar(Marcador)
             binding.LocalMarcador.text=reiniciar(Marcador)
         }
+        siguinete_boton.setOnClickListener {
+            val marcador=Marcadorc(binding.LocalMarcador.text.toString(),binding.VisitanteMarcador.text.toString())
+            openResultado(marcador)
+
+        }
+
+
+
     }
 
-    private fun reiniciar(Marcador: marcador): String? {
+    private fun openResultado(marcadorc: Marcadorc) {
+        val intent=Intent(this,Resultados::class.java)
+        intent.putExtra(Resultados.ResultadoKey,marcadorc)
+        startActivity(intent)
+    }
+
+    private fun reiniciar(Marcadorc: Marcadorc): String? {
         val re= "0"
-        Marcador.local=re
-        Marcador.visitante=re
+        Marcadorc.local=re
+        Marcadorc.visitante=re
         return re
     }
 
-    private fun sumar(vis: String,Marcador: marcador): String? {
+    private fun sumar(vis: String, Marcadorc: Marcadorc): String? {
         if (vis=="local")
         {
-            val local_sum=Marcador.local.toInt()+1
-            Marcador.local=local_sum.toString()
+            val local_sum=Marcadorc.local.toInt()+1
+            Marcadorc.local=local_sum.toString()
             return local_sum.toString()
         }
         else{
-            val visit_sum=Marcador.visitante.toInt()+1
-            Marcador.visitante=visit_sum.toString()
+            val visit_sum=Marcadorc.visitante.toInt()+1
+            Marcadorc.visitante=visit_sum.toString()
             return visit_sum.toString()
         }
     }
 
 
-    private fun sumar2(vis:String, Marcador: marcador): String {
+    private fun sumar2(vis:String, Marcadorc: Marcadorc): String {
         if (vis=="local")
         {
-            val local_sum=Marcador.local.toInt()+2
-            Marcador.local=local_sum.toString()
+            val local_sum=Marcadorc.local.toInt()+2
+            Marcadorc.local=local_sum.toString()
             return local_sum.toString()
         }
         else{
-            val visit_sum=Marcador.visitante.toInt()+2
-            Marcador.visitante=visit_sum.toString()
+            val visit_sum=Marcadorc.visitante.toInt()+2
+            Marcadorc.visitante=visit_sum.toString()
             return visit_sum.toString()
         }
     }
 
-    private fun restar(vis:String,Marcador: marcador): String? {
+    private fun restar(vis:String, Marcadorc: Marcadorc): String? {
 
             if (vis=="local")
             {
-                val local_sum=Marcador.local.toInt()-1
-                Marcador.local=local_sum.toString()
+                val local_sum=Marcadorc.local.toInt()-1
+                Marcadorc.local=local_sum.toString()
                 return local_sum.toString()
             }
 
         else{
-            val visit_sum=Marcador.visitante.toInt()-1
-            Marcador.visitante=visit_sum.toString()
+            val visit_sum=Marcadorc.visitante.toInt()-1
+            Marcadorc.visitante=visit_sum.toString()
             return visit_sum.toString()
         }
     }
