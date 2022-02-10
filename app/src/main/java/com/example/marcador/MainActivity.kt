@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             binding.LocalMarcador.text=reiniciar(Marcador)
         }
         siguinete_boton.setOnClickListener {
-            val marcador=Marcadorc(binding.LocalMarcador.text.toString(),binding.VisitanteMarcador.text.toString())
+            val marcador=Marcadorc(binding.LocalMarcador.text.toString(),binding.VisitanteMarcador.text .toString())
             openResultado(marcador)
 
         }

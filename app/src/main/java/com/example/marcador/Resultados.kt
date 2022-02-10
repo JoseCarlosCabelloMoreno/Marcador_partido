@@ -19,6 +19,21 @@ class Resultados : AppCompatActivity() {
         val bundle=intent.extras!!
         val marca=bundle.getParcelable<Marcadorc>(ResultadoKey)!!
         binding.marcador=marca
+        binding.total.text=comparar(marca)
+    }
+
+    private fun comparar(mar: Marcadorc): String? {
+        if (mar.local.toInt() > mar.visitante.toInt())
+        {
+            return "Gano el local"
+        }
+        if (mar.local.toInt() < mar.visitante.toInt())
+        {
+            return "Gano el visitante"
+        }
+        else{
+            return "Empate"
+        }
     }
 
 }
