@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-88dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/LocalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Local"
+            android:textSize="40dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/LocalMarcador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LocalText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="0"
+            android:textSize="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/LocalText" />
+
+
+        <Button
+            android:id="@+id/boton_1_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/LocalMarcador"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/LocalMarcador"
+            android:backgroundTint="@color/botonColor"
+            android:hint="+1"
+            app:layout_constraintLeft_toRightOf="@+id/LocalMarcador"
+            app:layout_constraintStart_toEndOf="@+id/LocalMarcador" />
+
+        <Button
+            android:id="@+id/boton_2_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/LocalMarcador"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/LocalMarcador"
+            android:backgroundTint="@color/botonColor"
+            android:hint="+2"
+            app:layout_constraintLeft_toRightOf="@+id/LocalMarcador"
+            app:layout_constraintStart_toEndOf="@+id/LocalMarcador" />
+
+        <Button
+            android:id="@+id/boton_menos_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/LocalMarcador"
+
+            android:layout_marginLeft="40dp"
+
+
+            android:backgroundTint="@color/botonColor"
+            android:hint="-1"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toEndOf="@+id/LocalMarcador" />
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LocalMarcador"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/boton_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imagen"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/LocalMarcador"
+            android:backgroundTint="@color/botonColor"
+            android:src="@drawable/update"
+            />
+
+        <ImageButton
+            android:id="@+id/boton_resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imagen"
+            android:layout_marginLeft="40dp"
+            android:backgroundTint="@color/botonColor"
+            android:src="@drawable/next"
+            android:layout_toRightOf="@+id/LocalMarcador" />
+
+        <TextView
+            android:id="@+id/VisitanteMarcador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imagen"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="0"
+            android:textSize="70dp" />
+
+        <Button
+            android:id="@+id/boton_1_visitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/VisitanteMarcador"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/VisitanteMarcador"
+            android:backgroundTint="@color/botonColor"
+            android:hint="+1"
+            app:layout_constraintLeft_toRightOf="@+id/VisitanteMarcador"
+            app:layout_constraintStart_toEndOf="@+id/VisitanteMarcador" />
+
+        <Button
+            android:id="@+id/boton_2_visitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/VisitanteMarcador"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/VisitanteMarcador"
+            android:backgroundTint="@color/botonColor"
+            android:hint="+2"
+            app:layout_constraintLeft_toRightOf="@+id/VisitanteMarcador"
+            app:layout_constraintStart_toEndOf="@+id/VisitanteMarcador" />
+
+        <Button
+            android:id="@+id/boton_menos_visitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/VisitanteMarcador"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toStartOf="@+id/LocalMarcador"
+            android:layout_toLeftOf="@+id/VisitanteMarcador"
+            android:backgroundTint="@color/botonColor"
+            android:hint="-1"
+            app:layout_constraintStart_toEndOf="@+id/VisitanteMarcador" />
+
+        <TextView
+            android:id="@+id/VisitanteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/VisitanteMarcador"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Visitante"
+            android:textSize="40dp"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
