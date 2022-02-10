@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Marcador</string>
+    <string name="local">Local</string>
+    <string name="_0">0</string>
+    <string name="_1">+1</string>
+    <string name="menos_uno">-1</string>
+    <string name="_2">+2</string>
+    <string name="visitante">Visitante</string>
 </resources>
